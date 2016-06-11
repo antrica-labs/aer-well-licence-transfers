@@ -1,0 +1,118 @@
+<submission version="1.0" xmlns="x-schema:DDSSchema.xml">
+	<xfr xmlns="x-schema:LTSSchema.xml">
+		<licence_transfer_application>
+			<submission_id>NEW</submission_id>
+			<submission_date>2001-5 -28</submission_date>
+		</licence_transfer_application>
+		<licence_transfer_contact>
+			<dds_user_id>HU1061</dds_user_id>
+			<ba_id>0R46</ba_id>
+			<contact_name>CONTACT NAME</contact_name>
+			<contact_telephone>TELEPHONE</contact_telephone>
+			<contact_email>EMAIL</contact_email>
+			<contact_facsimile>OPTIONAL</contact_facsimile>
+			<contact_file_number>OPTIONAL</contact_file_number>
+			<applicant_ind>TRANSFEROR_APPLICANT</applicant_ind>
+		</licence_transfer_contact>
+		<licence_transfer_contact>
+			<dds_user_id>SC1127</dds_user_id>
+			<ba_id>0TK5</ba_id>
+			<contact_name>CONTACT NAME</contact_name>
+			<contact_telephone>TELEPHONE</contact_telephone>
+			<contact_email>EMAIL</contact_email>
+			<contact_facsimile>OPTIONAL</contact_facsimile>
+			<contact_file_number>OPTIONAL</contact_file_number>
+			<applicant_ind>TRANSFEREE</applicant_ind>
+		</licence_transfer_contact>
+		<wells>
+			<licence>
+				<lic_num>99999</lic_num>
+				<keep_current_well_name>Reject</keep_current_well_name>
+				<well_name>SCHOONER EXPL NEW WELL 15-5-21-1</well_name>
+				<!-- sl (surface location) TAG NEEDED FOR LEGACY PURPOSES BUT NO LONGER USED BY SYSTEM -->
+				<sl></sl>
+				<wip>
+					<ba_id>0031</ba_id>
+					<name>ANADARKO CANADA CORPORATION</name>
+					<interest>100</interest>
+				</wip>
+			</licence>
+			<licence>
+				<lic_num>99999</lic_num>
+				<keep_current_well_name>Reject</keep_current_well_name>
+				<well_name>SCHOONER EXPL NEW WELL 13-7-21-1</well_name>
+				<!-- sl (surface location) TAG NEEDED FOR LEGACY PURPOSES BUT NO LONGER USED BY SYSTEM -->
+				<sl></sl>
+				<wip>
+					<ba_id>0031</ba_id>
+					<name>ANADARKO CANADA CORPORATION</name>
+					<interest>100</interest>
+				</wip>
+			</licence>
+			<licence>
+				<lic_num>99999</lic_num>
+				<keep_current_well_name>Reject</keep_current_well_name>
+				<well_name>SCHOONER EXPL NEW WELL 12-31-25-1</well_name>
+				<!-- sl (surface location) TAG NEEDED FOR LEGACY PURPOSES BUT NO LONGER USED BY SYSTEM -->
+				<sl></sl>
+				<wip>
+					<ba_id>0031</ba_id>
+					<name>ANADARKO CANADA CORPORATION</name>
+					<interest>100</interest>
+				</wip>
+			</licence>
+			<licence>
+				<lic_num>99999</lic_num>
+				<keep_current_well_name>Reject</keep_current_well_name>
+				<well_name>SCHOONER EXPL NEW WELL 11-18-26-1</well_name>
+				<!-- sl (surface location) TAG NEEDED FOR LEGACY PURPOSES BUT NO LONGER USED BY SYSTEM -->
+				<sl></sl>
+				<wip>
+					<ba_id>0031</ba_id>
+					<name>ANADARKO CANADA CORPORATION</name>
+					<interest>100</interest>
+				</wip>
+			</licence>
+		</wells>
+		<facilities>
+			<licence>
+				<lic_num>99999</lic_num>
+				<!-- sl (surface location) TAG NEEDED FOR LEGACY PURPOSES BUT NO LONGER USED BY SYSTEM -->
+				<sl></sl>
+				<wip>
+					<ba_id>0031</ba_id>
+					<name>ANADARKO CANADA CORPORATION</name>
+					<interest>100</interest>
+				</wip>
+				<wip>
+					<ba_id>0030</ba_id>
+					<name>UNKNOWN</name>
+					<interest>000.0005</interest>
+				</wip>
+			</licence>
+		</facilities>
+		<pipelines>
+			<plicence>
+				<lic_num>99999</lic_num>
+				<full>No</full>
+				<line_number>2</line_number>
+				<line_number>3</line_number>
+				<line_number>5</line_number>
+				<line_number>15</line_number>
+				<line_number>16</line_number>
+			</plicence>
+			<plicence>
+				<lic_num>99999</lic_num>
+				<full>No</full>
+				<line_number>3</line_number>
+			</plicence>
+			<plicence>
+				<lic_num>99999</lic_num>
+				<full>No</full>
+				<line_number>2</line_number>
+				<line_number>3</line_number>
+				<line_number>4</line_number>
+			</plicence>
+		</pipelines>
+	</xfr>
+</submission>

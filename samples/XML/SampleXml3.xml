@@ -1,0 +1,132 @@
+<submission><xfr>
+<licence_transfer_application>
+<submission_id>NEW</submission_id>
+
+<!-- Important to enter the current date in the format displayed here -->
+<submission_date>2002-4-17</submission_date>
+
+</licence_transfer_application>
+
+<!-- TRANSFEROR CONTACT INFORMATION -->
+<licence_transfer_contact>
+
+<!-- Enter the DDS User Id of the Transferor Party -->
+<!-- Leave blank if you are submitting the Applicatiion as the Transferee -->
+<dds_user_id>EU1548</dds_user_id>
+
+<!-- These next four field are mandatory.  The email and phone number must follow the format shown in the example -->
+<!-- Enter the Company Id of the Transferor Party -->
+<ba_id>0B0Q</ba_id>
+<contact_name>John Smith</contact_name>
+<contact_telephone>(403) 555-1212</contact_telephone>
+<contact_email>johnsmith@emailaddress.com</contact_email>
+
+<!-- Facsimilie and File Number are optional fields.  If you do not want to enter either of these leave the tags and delete any text between them -->
+<contact_facsimile>(403) 555-1313</contact_facsimile>
+<contact_file_number>123A-21</contact_file_number>
+
+<!-- This identifies who is the initiator of the transfer.  If you are submitting as the transferor party then enter this field as shown -->
+<!-- If you're submitting as the Transferee party then just enter TRANSFEROR for this field -->
+<applicant_ind>TRANSFEROR_APPLICANT</applicant_ind>
+</licence_transfer_contact>
+
+<!-- TRANSFEREE CONTACT INFORMATION -->
+<licence_transfer_contact>
+<dds_user_id>0P5612</dds_user_id>
+
+<ba_id>OPI8</ba_id>
+<contact_name>Jane Doe</contact_name>
+<contact_telephone>(403) 123-1234</contact_telephone>
+<contact_email>janedoe@emailaddress.com</contact_email>
+
+<contact_facsimile></contact_facsimile>
+<contact_file_number></contact_file_number>
+<applicant_ind>TRANSFEREE</applicant_ind>
+</licence_transfer_contact>
+
+<!-- The rest of these sections list the licences -->
+<!-- WELL LICENCES -->
+<wells>
+<licence>
+<lic_num>0286412</lic_num>
+
+<!-- 'Reject' to change the well name.  'Keep' to leave it as it is. -->
+<keep_current_well_name>Reject</keep_current_well_name>
+
+<!-- The well name should be Company Abbreviation-Any Text-Field or Strike Area-Location -->
+<!-- The well name is required only if the value of the preceding tag (keep_current_well_name) is 'Reject', or else leave blank. -->
+<well_name>AEUB 23-A WAINWRIGHT 14-30-45-01</well_name>
+
+<!-- Surface Location - TAG NEEDED FOR LEGACY PURPOSES BUT NO LONGER USED BY SYSTEM -->
+<sl></sl>
+
+<!-- First Working Interest Participant -->
+<wip><ba_id>0PI8</ba_id>
+<name>ANY RESOURCES LIMITED</name>
+<interest>90</interest>
+</wip>
+<wip><ba_id>0PI4</ba_id>
+<name>ANY OTHER RESOURCES LIMITED</name>
+<interest>10</interest>
+</wip>
+<wip><ba_id>0PG4</ba_id>
+<!-- If WIP name is not available value must equal 'NOT ENTERED' -->
+<name>NOT ENTERED</name>
+<interest>10</interest>
+</wip>
+<wip>
+<!-- If WIP does not have an BA Code, value must equal 'NOT ENTERED' -->
+<ba_id>NOT ENTERED</ba_id>
+<name>SOME RESOURCES LIMITED</name>
+<interest>10</interest>
+</wip>
+</licence>
+
+<!-- Second Well Licence -->
+<licence>
+<lic_num>0296415</lic_num>
+<keep_current_well_name>Keep</keep_current_well_name>
+<well_name></well_name>
+<sl></sl>
+<wip>
+<ba_id>0PI8</ba_id>
+<name>ANY RESOURCES LIMITED</name>
+<interest>100</interest>
+</wip>
+</licence>
+
+</wells>
+
+<!-- FACILITY LICENCES -->
+<facilities>
+<licence>
+<lic_num>54814</lic_num>
+<!-- Surface Location - TAG NEEDED FOR LEGACY PURPOSES BUT NO LONGER USED BY SYSTEM -->
+<sl></sl>
+<wip>
+<ba_id>0PI8</ba_id>
+<name>ANY RESOURCES LIMITED</name>
+<interest>100</interest>
+</wip>
+</licence>
+</facilities>
+
+<!-- PIPELINE LICENCES -->
+<pipelines>
+	<plicence>
+		<lic_num>75861</lic_num>
+		<!-- 'Yes' for a full pipeline transfer.  'No' for a partial pipeline transfer. --> 
+		<full>No</full> 
+		<!-- The line numbers are required only for 'Partial' transfers -->
+		<line_number>5</line_number> 
+		<line_number>6</line_number>
+		<line_number>7</line_number>
+		<line_number>8</line_number>
+		<line_number>9</line_number>
+	</plicence>
+	<plicence>
+		<lic_num>96871</lic_num> 
+		<full>Yes</full> 
+	</plicence>
+</pipelines>
+</xfr></submission>
