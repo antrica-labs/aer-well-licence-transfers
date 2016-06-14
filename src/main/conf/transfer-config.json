@@ -1,0 +1,23 @@
+{
+  "submission_date": "2016-06-16",
+
+  "from": {
+    "dds_user_id": "",
+    "ba_id": "",
+    "contact_name": "",
+    "contact_email": "",
+    "contact_fax": "",
+    "contact_file_number": "",
+    "applicant_ind": "TRANSFEROR_APPLICANT"
+  },
+
+  "to": {
+    "dds_user_id": "",
+    "ba_id": "",
+    "contact_name": "",
+    "contact_email": "",
+    "contact_fax": "",
+    "contact_file_number": "",
+    "applicant_ind": "TRANSFEROR_APPLICANT"
+  }
+}
