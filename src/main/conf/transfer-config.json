@@ -1,23 +1,21 @@
 {
-  "submission_date": "2016-06-16",
+  "submissionDate": "2016-06-15",
 
   "from": {
-    "dds_user_id": "",
-    "ba_id": "",
-    "contact_name": "",
-    "contact_email": "",
-    "contact_fax": "",
-    "contact_file_number": "",
-    "applicant_ind": "TRANSFEROR_APPLICANT"
+    "ddsUserId": "jhorel1",
+    "baId": "A6J4",
+    "contactName": "Judy Horel",
+    "contactEmail": "judy.horel@spyglassresources.com",
+    "contactTelephone": "(403) 930-3522",
+    "applicantInd": "TRANSFEROR_APPLICANT"
   },
 
   "to": {
-    "dds_user_id": "",
-    "ba_id": "",
-    "contact_name": "",
-    "contact_email": "",
-    "contact_fax": "",
-    "contact_file_number": "",
-    "applicant_ind": "TRANSFEROR_APPLICANT"
+    "ddsUserId": "frankhcshi",
+    "baId": "A7AZ",
+    "contactName": "Frank Shi",
+    "contactEmail": "frankhcshi@gmail.com",
+    "contactTelephone": "(403) 992-6898",
+    "applicantInd": "TRANSFEREE"
   }
 }

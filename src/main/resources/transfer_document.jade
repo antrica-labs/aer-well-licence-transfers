@@ -1,6 +1,38 @@
-doctype xml
-xfr
-    licence_transfer_application
-        submission_id= "NEW"
-        submission_date= submissionDate
+submission
+    xfr
+        licence_transfer_application
+            submission_id= "NEW"
+            submission_date= submissionDate
 
+        licence_transfer_contact
+            dds_user_id= fromContact.ddsUserId
+            ba_id= fromContact.baId
+            contact_name= fromContact.contactName
+            contact_telephone= fromContact.contactTelephone
+            contact_email= fromContact.contactEmail
+            applicant_ind= fromContact.applicantInd
+
+        licence_transfer_contact
+            dds_user_id= toContact.ddsUserId
+            ba_id= toContact.baId
+            contact_name= toContact.contactName
+            contact_telephone= toContact.contactTelephone
+            contact_email= toContact.contactEmail
+            applicant_ind= toContact.applicantInd
+
+        wells
+            for well in wells
+                licence
+                    lic_num= " " + well.licNum
+                    keep_current_well_name= well.keepCurrentWellName
+                    well_name= well.wellName
+                    sl= well.sl
+                    for wi in well.workingInterests
+                        wip
+                            ba_id= wi.baId
+                            name= wi.name
+                            interest= wi.interest
+
+        facilities
+
+        pipelines
