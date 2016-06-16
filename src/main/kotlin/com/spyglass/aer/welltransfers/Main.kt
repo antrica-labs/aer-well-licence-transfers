@@ -93,12 +93,14 @@ object Main {
         fullOwnershipModel.put("fromContact", config.from)
         fullOwnershipModel.put("toContact", config.to)
         fullOwnershipModel.put("wells", getFullOwnershipLicences(statement))
+        fullOwnershipModel.put("formatter", WorkingInterestFormatter())
 
         val partialOwnershipModel = HashMap<String, Any>()
         partialOwnershipModel.put("submissionDate", config.submissionDate)
         partialOwnershipModel.put("fromContact", config.from)
         partialOwnershipModel.put("toContact", config.to)
         partialOwnershipModel.put("wells", getPartialOwnershipLicences(statement))
+        partialOwnershipModel.put("formatter", WorkingInterestFormatter())
 
         val fullOwnershipXml = jadeConfig.renderTemplate(jadeTemplate, fullOwnershipModel)
         val partialOwnershipXml = jadeConfig.renderTemplate(jadeTemplate, partialOwnershipModel)
