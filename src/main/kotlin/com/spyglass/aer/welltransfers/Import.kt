@@ -8,17 +8,6 @@ import java.sql.DriverManager
 import java.sql.Statement
 import java.util.*
 
-enum class Headers {
-    UWI,
-    LicenceNumber,
-    WellName,
-    FormattedUWI,
-    DOIType,
-    PartnerBACode,
-    Partner,
-    PartnerPercent
-}
-
 object Import {
     @JvmStatic
     fun main(args: Array<String>) {
@@ -31,7 +20,7 @@ object Import {
         val licences = LinkedList<WellLicenceRecord>()
 
         val input = FileReader(filename)
-        val records = CSVFormat.EXCEL.withHeader(Headers::class.java).parse(input)
+        val records = CSVFormat.EXCEL.withHeader(ImportHeaders::class.java).parse(input)
 
         var row = 0
         var current: WellLicenceRecord? = null
@@ -41,20 +30,20 @@ object Import {
 
             if (row == 1) continue
 
-            if (current == null || current.licenceNumber != record.get(Headers.LicenceNumber)) {
+            if (current == null || current.licenceNumber != record.get(ImportHeaders.LicenceNumber)) {
                 current = WellLicenceRecord(
-                        UWI = record.get(Headers.UWI),
-                        licenceNumber = record.get(Headers.LicenceNumber),
-                        wellName = record.get(Headers.WellName)
+                        UWI = record.get(ImportHeaders.UWI),
+                        licenceNumber = record.get(ImportHeaders.LicenceNumber),
+                        wellName = record.get(ImportHeaders.WellName)
                 )
 
                 licences.add(current)
             }
 
             val doi = WellDOIRecord(
-                    partnerName = record.get(Headers.Partner),
-                    partnerBACode = record.get(Headers.PartnerBACode),
-                    workingInterest = record.get(Headers.PartnerPercent).toFloat()
+                    partnerName = record.get(ImportHeaders.Partner),
+                    partnerBACode = record.get(ImportHeaders.PartnerBACode),
+                    workingInterest = record.get(ImportHeaders.PartnerPercent).toFloat()
             )
 
             current.DOIs.add(doi)

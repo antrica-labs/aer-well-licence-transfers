@@ -30,3 +30,7 @@ database/*.db
 # Excel tmp files
 ~$*.xlsx
 ~$*.xls
+
+# Default output
+full-ownership-wells.xml
+partial-ownership-wells.xml

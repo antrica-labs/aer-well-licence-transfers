@@ -4,6 +4,7 @@ import com.github.salomonbrys.kotson.fromJson
 import com.google.gson.Gson
 import com.spyglass.aer.welltransfers.entities.conf.SubmissionDetails
 import com.spyglass.aer.welltransfers.entities.dds.*
+import de.neuland.jade4j.Jade4J
 import de.neuland.jade4j.JadeConfiguration
 import java.io.FileReader
 import java.io.PrintWriter
@@ -80,26 +81,36 @@ object Main {
         var connection = DriverManager.getConnection("jdbc:sqlite:./database/well_licences.db")
         var statement = connection.createStatement()
 
-        val model = HashMap<String, Any>()
-
-        model.put("submissionDate", config.submissionDate)
-        model.put("fromContact", config.from)
-        model.put("toContact", config.to)
-        model.put("wells", getFullOwnershipLicences(statement))
-        //model.put("wells", getPartialOwnershipLicences(statement))
-
         val jadeConfig = JadeConfiguration()
-        val jadeTemplate = jadeConfig.getTemplate("./src/main/resources/transfer_document.jade")
 
         jadeConfig.isPrettyPrint = true
+        jadeConfig.mode = Jade4J.Mode.XML
 
-        val xml = jadeConfig.renderTemplate(jadeTemplate, model)
+        val jadeTemplate = jadeConfig.getTemplate("./src/main/resources/transfer_document.jade")
 
-        val output = PrintWriter("./transfer_file.xml")
+        val fullOwnershipModel = HashMap<String, Any>()
+        fullOwnershipModel.put("submissionDate", config.submissionDate)
+        fullOwnershipModel.put("fromContact", config.from)
+        fullOwnershipModel.put("toContact", config.to)
+        fullOwnershipModel.put("wells", getFullOwnershipLicences(statement))
 
-        output.print(xml)
-        output.flush()
-        output.close()
+        val partialOwnershipModel = HashMap<String, Any>()
+        partialOwnershipModel.put("submissionDate", config.submissionDate)
+        partialOwnershipModel.put("fromContact", config.from)
+        partialOwnershipModel.put("toContact", config.to)
+        partialOwnershipModel.put("wells", getPartialOwnershipLicences(statement))
+
+        val fullOwnershipXml = jadeConfig.renderTemplate(jadeTemplate, fullOwnershipModel)
+        val partialOwnershipXml = jadeConfig.renderTemplate(jadeTemplate, partialOwnershipModel)
+
+        val fullOwneshipOutput = PrintWriter("full-ownership-wells.xml")
+        val partialOwnershipOutput = PrintWriter("partial-ownership-wells.xml")
+
+        fullOwneshipOutput.print(fullOwnershipXml)
+        partialOwnershipOutput.print(partialOwnershipXml)
+
+        fullOwneshipOutput.close()
+        partialOwnershipOutput.close()
     }
 
     fun getFullOwnershipLicences(statement: Statement) : List<Licence> {
@@ -149,7 +160,7 @@ object Main {
                     interest = rs.getFloat(5)
             )
 
-            licence!!.workingInterests.add(wi)
+            licence.workingInterests.add(wi)
         }
 
         return list
